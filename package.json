@@ -1,0 +1,31 @@
+{
+  "name": "real-time-chat-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "compile": "rm -rf ./disc && tsc",
+    "start": "npm run compile && node ./dist/index.js",
+    "dev": "nodemon --exec node --no-warnings=ExperimentalWarning --loader ts-node/esm ./src/index.ts"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.10.4",
+    "@graphql-tools/schema": "^10.0.4",
+    "graphql": "^16.8.2",
+    "graphql-subscriptions": "^2.0.0",
+    "graphql-tag": "^2.12.6",
+    "graphql-ws": "^5.16.0",
+    "uuid": "^10.0.0",
+    "ws": "^8.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.5",
+    "nodemon": "^3.1.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
